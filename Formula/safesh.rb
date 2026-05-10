@@ -5,21 +5,21 @@
 class Safesh < Formula
   desc "Drop-in safer replacement for bash in curl|bash flows."
   homepage "https://safesh.sh"
-  version "0.2.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/safesh/safesh/releases/download/v0.2.0/safesh_darwin_amd64.tar.gz"
-      sha256 "56c700f7781d712cfd077f728b21a5b99e86c799b9b6e8e12955681896bcc520"
+      url "https://github.com/safesh/safesh/releases/download/v1.0.0/safesh_darwin_amd64.tar.gz"
+      sha256 "4067fffe1e2f2c0ba28689314c2e3444e9735cd15eb89715b72c0768affb7228"
 
       define_method(:install) do
         bin.install "safesh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/safesh/safesh/releases/download/v0.2.0/safesh_darwin_arm64.tar.gz"
-      sha256 "59401bbc010d5280e26fa1567daaab5cdabf0f7ee394fb22ad12b98ed0656a51"
+      url "https://github.com/safesh/safesh/releases/download/v1.0.0/safesh_darwin_arm64.tar.gz"
+      sha256 "94db70139384dd8ff52e207c707d4a886cc63d5823f5d034e4a34e105a9e0fcf"
 
       define_method(:install) do
         bin.install "safesh"
@@ -29,15 +29,15 @@ class Safesh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/safesh/safesh/releases/download/v0.2.0/safesh_linux_amd64.tar.gz"
-      sha256 "3aeda6dd9a6933f7e1403c1093f34a9bc59c7315bfe7aedf46a8753a2f134198"
+      url "https://github.com/safesh/safesh/releases/download/v1.0.0/safesh_linux_amd64.tar.gz"
+      sha256 "b61d76577e5c9acccaf6c6db867e3faef6ab914800bc29ff70b4d9e5020cd99c"
       define_method(:install) do
         bin.install "safesh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/safesh/safesh/releases/download/v0.2.0/safesh_linux_arm64.tar.gz"
-      sha256 "774e0c7cdfc41d84e895b01bb8a1e402b1799055e4a6e18a22b0babf6600bff4"
+      url "https://github.com/safesh/safesh/releases/download/v1.0.0/safesh_linux_arm64.tar.gz"
+      sha256 "7d62927576442cd5259f64449092a40dd13616079c4e6f12948e5abdaea7b664"
       define_method(:install) do
         bin.install "safesh"
       end
